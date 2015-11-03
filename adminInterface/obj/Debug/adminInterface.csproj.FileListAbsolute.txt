@@ -1,0 +1,11 @@
+\\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\bin\Debug\adminInterface.exe.config
+\\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\bin\Debug\adminInterface.exe
+\\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\bin\Debug\adminInterface.pdb
+\\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\bin\Debug\MySql.Data.dll
+\\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\obj\Debug\adminInterface.csprojResolveAssemblyReference.cache
+\\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\obj\Debug\adminInterface.Form1.resources
+\\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\obj\Debug\adminInterface.Properties.Resources.resources
+\\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\obj\Debug\adminInterface.csproj.GenerateResource.Cache
+\\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\obj\Debug\adminInterface.exe
+\\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\obj\Debug\adminInterface.pdb
+\\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\obj\Debug\adminInterface.Main.resources
