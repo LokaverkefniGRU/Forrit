@@ -70,31 +70,7 @@ namespace adminInterface
             }
         }
 
-        private void btRegister_Click(object sender, EventArgs e)
-        {
-            if (tbKeyCode.Text == cs.NumGenerator().ToString())
-            {
-                string username = tbUsernameRegister.Text;
-                string password = cs.Encrypt(tbPasswordRegister.Text);
-
-                try
-                {
-                    database.Register(username, password);
-                    MessageBox.Show("You have been registered into our database, please log in");
-                    tbUsernameLogin.Text = tbUsernameRegister.Text;
-                    tabControl1.Show();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("We have encountered an error in the registration, please try again later");
-                    MessageBox.Show(ex.ToString());
-                } 
-            }
-            else
-            {
-                MessageBox.Show("Wrong KeyCode Entered");
-            }
-        }
+       
 
 
         

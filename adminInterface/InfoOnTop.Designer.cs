@@ -47,7 +47,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 90);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 173);
+            this.listBox1.Size = new System.Drawing.Size(163, 173);
             this.listBox1.TabIndex = 19;
             // 
             // cbOnTop

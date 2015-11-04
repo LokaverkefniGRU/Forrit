@@ -33,13 +33,14 @@ namespace adminInterface
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (listBox1.SelectedIndex != -1)
             {
                 string nafn = null;
                 string[] nafnid = null;
                 nafn = listBox1.SelectedItem.ToString();
 
-                char split = ':';
+                char split = '-';
 
                 nafnid = nafn.Split(split);
                 tbIDUserUpdate.Text = nafnid[0];
@@ -353,17 +354,29 @@ namespace adminInterface
             
         }
 
-        private void btGenerate_Click(object sender, EventArgs e)
-        {
-            int gen = cs.NumGenerator();
-
-            tbKeycode.Text = gen.ToString();
-        }
-
         private void btInfo_Click(object sender, EventArgs e)
         {
             Info info = new Info();
             info.Show();
+        }
+
+        private void btShowAllPosts_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            List<string> linur = new List<string>();
+            try
+            {
+                linur = database.ShowAllPosts();
+
+                foreach (string lin in linur)
+                {
+                    listBox1.Items.Add(lin);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

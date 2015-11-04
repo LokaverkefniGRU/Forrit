@@ -33,8 +33,8 @@
             this.tbSearchUpdate = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btShowAllUserUpdate = new System.Windows.Forms.Button();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPost = new System.Windows.Forms.TabPage();
+            this.tabEmail = new System.Windows.Forms.TabPage();
             this.tbEmailSubject = new System.Windows.Forms.TextBox();
             this.rtbEmailBody = new System.Windows.Forms.RichTextBox();
             this.tbEmailID = new System.Windows.Forms.TextBox();
@@ -57,7 +57,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.btShowReportedUsers = new System.Windows.Forms.Button();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabDelete = new System.Windows.Forms.TabPage();
             this.btDelete = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.tbEmailUserDelete = new System.Windows.Forms.TextBox();
@@ -67,7 +67,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabUpdate = new System.Windows.Forms.TabPage();
             this.label20 = new System.Windows.Forms.Label();
             this.btUpdate = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -84,18 +84,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tbKeycode = new System.Windows.Forms.TextBox();
-            this.btGenerate = new System.Windows.Forms.Button();
+            this.tabReport = new System.Windows.Forms.TabControl();
             this.btInfo = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tabPage9.SuspendLayout();
-            this.tabPage8.SuspendLayout();
+            this.rtbPostBody = new System.Windows.Forms.RichTextBox();
+            this.btShowAllPosts = new System.Windows.Forms.Button();
+            this.tabPost.SuspendLayout();
+            this.tabEmail.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabControl2.SuspendLayout();
+            this.tabDelete.SuspendLayout();
+            this.tabUpdate.SuspendLayout();
+            this.tabReport.SuspendLayout();
             this.SuspendLayout();
             // 
             // btSearchUpdate
@@ -134,38 +132,38 @@
             this.btShowAllUserUpdate.UseVisualStyleBackColor = true;
             this.btShowAllUserUpdate.Click += new System.EventHandler(this.btShowAllUsers_Click);
             // 
-            // tabPage9
+            // tabPost
             // 
-            this.tabPage9.Controls.Add(this.button1);
-            this.tabPage9.Controls.Add(this.richTextBox1);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(626, 277);
-            this.tabPage9.TabIndex = 4;
-            this.tabPage9.Text = "Post Control";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            this.tabPost.Controls.Add(this.btShowAllPosts);
+            this.tabPost.Controls.Add(this.rtbPostBody);
+            this.tabPost.Location = new System.Drawing.Point(4, 22);
+            this.tabPost.Name = "tabPost";
+            this.tabPost.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPost.Size = new System.Drawing.Size(626, 277);
+            this.tabPost.TabIndex = 4;
+            this.tabPost.Text = "Post Control";
+            this.tabPost.UseVisualStyleBackColor = true;
             // 
-            // tabPage8
+            // tabEmail
             // 
-            this.tabPage8.Controls.Add(this.tbEmailSubject);
-            this.tabPage8.Controls.Add(this.rtbEmailBody);
-            this.tabPage8.Controls.Add(this.tbEmailID);
-            this.tabPage8.Controls.Add(this.tbEmailName);
-            this.tabPage8.Controls.Add(this.tbEmailReceiver);
-            this.tabPage8.Controls.Add(this.label19);
-            this.tabPage8.Controls.Add(this.cbSendToAll);
-            this.tabPage8.Controls.Add(this.btSendEmail);
-            this.tabPage8.Controls.Add(this.label8);
-            this.tabPage8.Controls.Add(this.label9);
-            this.tabPage8.Controls.Add(this.label10);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(626, 277);
-            this.tabPage8.TabIndex = 3;
-            this.tabPage8.Text = "Email";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.tabEmail.Controls.Add(this.tbEmailSubject);
+            this.tabEmail.Controls.Add(this.rtbEmailBody);
+            this.tabEmail.Controls.Add(this.tbEmailID);
+            this.tabEmail.Controls.Add(this.tbEmailName);
+            this.tabEmail.Controls.Add(this.tbEmailReceiver);
+            this.tabEmail.Controls.Add(this.label19);
+            this.tabEmail.Controls.Add(this.cbSendToAll);
+            this.tabEmail.Controls.Add(this.btSendEmail);
+            this.tabEmail.Controls.Add(this.label8);
+            this.tabEmail.Controls.Add(this.label9);
+            this.tabEmail.Controls.Add(this.label10);
+            this.tabEmail.Location = new System.Drawing.Point(4, 22);
+            this.tabEmail.Name = "tabEmail";
+            this.tabEmail.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEmail.Size = new System.Drawing.Size(626, 277);
+            this.tabEmail.TabIndex = 3;
+            this.tabEmail.Text = "Email";
+            this.tabEmail.UseVisualStyleBackColor = true;
             // 
             // tbEmailSubject
             // 
@@ -362,24 +360,24 @@
             this.btShowReportedUsers.Text = "Reported Users";
             this.btShowReportedUsers.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
+            // tabDelete
             // 
-            this.tabPage5.Controls.Add(this.btDelete);
-            this.tabPage5.Controls.Add(this.label11);
-            this.tabPage5.Controls.Add(this.tbEmailUserDelete);
-            this.tabPage5.Controls.Add(this.tbFullnameUserDelete);
-            this.tabPage5.Controls.Add(this.tbUsernameUserDelete);
-            this.tabPage5.Controls.Add(this.tbIDUserDelete);
-            this.tabPage5.Controls.Add(this.label12);
-            this.tabPage5.Controls.Add(this.label13);
-            this.tabPage5.Controls.Add(this.label14);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(626, 277);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "Delete";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabDelete.Controls.Add(this.btDelete);
+            this.tabDelete.Controls.Add(this.label11);
+            this.tabDelete.Controls.Add(this.tbEmailUserDelete);
+            this.tabDelete.Controls.Add(this.tbFullnameUserDelete);
+            this.tabDelete.Controls.Add(this.tbUsernameUserDelete);
+            this.tabDelete.Controls.Add(this.tbIDUserDelete);
+            this.tabDelete.Controls.Add(this.label12);
+            this.tabDelete.Controls.Add(this.label13);
+            this.tabDelete.Controls.Add(this.label14);
+            this.tabDelete.Location = new System.Drawing.Point(4, 22);
+            this.tabDelete.Name = "tabDelete";
+            this.tabDelete.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDelete.Size = new System.Drawing.Size(626, 277);
+            this.tabDelete.TabIndex = 1;
+            this.tabDelete.Text = "Delete";
+            this.tabDelete.UseVisualStyleBackColor = true;
             // 
             // btDelete
             // 
@@ -455,31 +453,31 @@
             this.label14.TabIndex = 21;
             this.label14.Text = "ID";
             // 
-            // tabPage4
+            // tabUpdate
             // 
-            this.tabPage4.Controls.Add(this.label20);
-            this.tabPage4.Controls.Add(this.btUpdate);
-            this.tabPage4.Controls.Add(this.label7);
-            this.tabPage4.Controls.Add(this.tbRPSUserUpdate);
-            this.tabPage4.Controls.Add(this.tbChngPwUserUpdate);
-            this.tabPage4.Controls.Add(this.tbConfirmedUserUpdate);
-            this.tabPage4.Controls.Add(this.tbEmailUserUpdate);
-            this.tabPage4.Controls.Add(this.tbFullnameUserUpdate);
-            this.tabPage4.Controls.Add(this.tbUsernameUserUpdate);
-            this.tabPage4.Controls.Add(this.tbIDUserUpdate);
-            this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Controls.Add(this.label4);
-            this.tabPage4.Controls.Add(this.label3);
-            this.tabPage4.Controls.Add(this.label2);
-            this.tabPage4.Controls.Add(this.label1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(626, 277);
-            this.tabPage4.TabIndex = 0;
-            this.tabPage4.Text = "Update";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabUpdate.Controls.Add(this.label20);
+            this.tabUpdate.Controls.Add(this.btUpdate);
+            this.tabUpdate.Controls.Add(this.label7);
+            this.tabUpdate.Controls.Add(this.tbRPSUserUpdate);
+            this.tabUpdate.Controls.Add(this.tbChngPwUserUpdate);
+            this.tabUpdate.Controls.Add(this.tbConfirmedUserUpdate);
+            this.tabUpdate.Controls.Add(this.tbEmailUserUpdate);
+            this.tabUpdate.Controls.Add(this.tbFullnameUserUpdate);
+            this.tabUpdate.Controls.Add(this.tbUsernameUserUpdate);
+            this.tabUpdate.Controls.Add(this.tbIDUserUpdate);
+            this.tabUpdate.Controls.Add(this.label6);
+            this.tabUpdate.Controls.Add(this.label5);
+            this.tabUpdate.Controls.Add(this.label4);
+            this.tabUpdate.Controls.Add(this.label3);
+            this.tabUpdate.Controls.Add(this.label2);
+            this.tabUpdate.Controls.Add(this.label1);
+            this.tabUpdate.Location = new System.Drawing.Point(4, 22);
+            this.tabUpdate.Name = "tabUpdate";
+            this.tabUpdate.Padding = new System.Windows.Forms.Padding(3);
+            this.tabUpdate.Size = new System.Drawing.Size(626, 277);
+            this.tabUpdate.TabIndex = 0;
+            this.tabUpdate.Text = "Update";
+            this.tabUpdate.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
@@ -612,35 +610,18 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "ID";
             // 
-            // tabControl2
+            // tabReport
             // 
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Controls.Add(this.tabPage8);
-            this.tabControl2.Controls.Add(this.tabPage9);
-            this.tabControl2.Location = new System.Drawing.Point(0, 215);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(634, 303);
-            this.tabControl2.TabIndex = 0;
-            // 
-            // tbKeycode
-            // 
-            this.tbKeycode.Location = new System.Drawing.Point(12, 171);
-            this.tbKeycode.Name = "tbKeycode";
-            this.tbKeycode.Size = new System.Drawing.Size(58, 20);
-            this.tbKeycode.TabIndex = 20;
-            // 
-            // btGenerate
-            // 
-            this.btGenerate.Location = new System.Drawing.Point(76, 171);
-            this.btGenerate.Name = "btGenerate";
-            this.btGenerate.Size = new System.Drawing.Size(70, 21);
-            this.btGenerate.TabIndex = 21;
-            this.btGenerate.Text = "Generate";
-            this.btGenerate.UseVisualStyleBackColor = true;
-            this.btGenerate.Click += new System.EventHandler(this.btGenerate_Click);
+            this.tabReport.Controls.Add(this.tabUpdate);
+            this.tabReport.Controls.Add(this.tabDelete);
+            this.tabReport.Controls.Add(this.tabPage6);
+            this.tabReport.Controls.Add(this.tabEmail);
+            this.tabReport.Controls.Add(this.tabPost);
+            this.tabReport.Location = new System.Drawing.Point(0, 215);
+            this.tabReport.Name = "tabReport";
+            this.tabReport.SelectedIndex = 0;
+            this.tabReport.Size = new System.Drawing.Size(634, 303);
+            this.tabReport.TabIndex = 0;
             // 
             // btInfo
             // 
@@ -655,23 +636,24 @@
             this.btInfo.UseVisualStyleBackColor = true;
             this.btInfo.Click += new System.EventHandler(this.btInfo_Click);
             // 
-            // richTextBox1
+            // rtbPostBody
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(435, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(191, 261);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.rtbPostBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtbPostBody.Location = new System.Drawing.Point(435, 0);
+            this.rtbPostBody.Name = "rtbPostBody";
+            this.rtbPostBody.Size = new System.Drawing.Size(191, 261);
+            this.rtbPostBody.TabIndex = 0;
+            this.rtbPostBody.Text = "";
             // 
-            // button1
+            // btShowAllPosts
             // 
-            this.button1.Location = new System.Drawing.Point(333, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 21);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Show All Posts";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btShowAllPosts.Location = new System.Drawing.Point(333, 6);
+            this.btShowAllPosts.Name = "btShowAllPosts";
+            this.btShowAllPosts.Size = new System.Drawing.Size(96, 21);
+            this.btShowAllPosts.TabIndex = 16;
+            this.btShowAllPosts.Text = "Show All Posts";
+            this.btShowAllPosts.UseVisualStyleBackColor = true;
+            this.btShowAllPosts.Click += new System.EventHandler(this.btShowAllPosts_Click);
             // 
             // Main
             // 
@@ -679,9 +661,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 497);
             this.Controls.Add(this.btInfo);
-            this.Controls.Add(this.btGenerate);
-            this.Controls.Add(this.tbKeycode);
-            this.Controls.Add(this.tabControl2);
+            this.Controls.Add(this.tabReport);
             this.Controls.Add(this.btSearchUpdate);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.tbSearchUpdate);
@@ -690,16 +670,16 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage8.PerformLayout();
+            this.tabPost.ResumeLayout(false);
+            this.tabEmail.ResumeLayout(false);
+            this.tabEmail.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
+            this.tabDelete.ResumeLayout(false);
+            this.tabDelete.PerformLayout();
+            this.tabUpdate.ResumeLayout(false);
+            this.tabUpdate.PerformLayout();
+            this.tabReport.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -711,8 +691,8 @@
         private System.Windows.Forms.Button btShowAllUserUpdate;
         private System.Windows.Forms.Button btSearchUpdate;
         private System.Windows.Forms.TextBox tbSearchUpdate;
-        private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage tabPost;
+        private System.Windows.Forms.TabPage tabEmail;
         private System.Windows.Forms.TextBox tbEmailSubject;
         private System.Windows.Forms.RichTextBox rtbEmailBody;
         private System.Windows.Forms.TextBox tbEmailID;
@@ -735,7 +715,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btShowReportedUsers;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabDelete;
         private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbEmailUserDelete;
@@ -745,7 +725,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabUpdate;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.Label label7;
@@ -762,11 +742,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TextBox tbKeycode;
-        private System.Windows.Forms.Button btGenerate;
+        private System.Windows.Forms.TabControl tabReport;
         private System.Windows.Forms.Button btInfo;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btShowAllPosts;
+        private System.Windows.Forms.RichTextBox rtbPostBody;
     }
 }

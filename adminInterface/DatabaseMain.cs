@@ -24,9 +24,9 @@ namespace adminInterface
         public void TengingVidGagnagrunn()
         {
             server = "tsuts.tskoli.is";
-            database = "0712982139_gru";
-            uid = "0712982139";
-            password = "banana555";
+            database = "2410982069_gru";
+            uid = "2410982069";
+            password = "svolu2";
 
             tengistrengur = "server=" + server + ";userid=" + uid + ";password=" + password + ";database=" + database;
             sqltenging = new MySqlConnection(tengistrengur);
@@ -70,7 +70,7 @@ namespace adminInterface
                 {
                     for (int i = 0; i < sqllesari.FieldCount; i++)
                     {
-                        lina += (sqllesari.GetValue(i).ToString()) + ":";
+                        lina += (sqllesari.GetValue(i).ToString()) + "-";
                     }
                     Faerslur.Add(lina);
                     lina = null;
@@ -222,14 +222,14 @@ namespace adminInterface
             string Row = null;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT ip FROM user WHERE online='1'";
+                fyrirspurn = "SELECT ip, username FROM user WHERE online='1'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
                 {
                     for (int i = 0; i < sqllesari.FieldCount; i++)
                     {
-                        Row += (sqllesari.GetValue(i).ToString()) + "";
+                        Row += (sqllesari.GetValue(i).ToString()) + "  ";
                     }
                     Results.Add(Row);
                     Row = null;
@@ -238,7 +238,29 @@ namespace adminInterface
                 return Results;
             }
             return Results;
-
+        }
+        public List<string> ShowAllPosts()
+        {
+            List<string> Results = new List<string>();
+            string Row = null;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT id, user_id, content, date FROM post";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    for (int i = 0; i < sqllesari.FieldCount; i++)
+                    {
+                        Row += (sqllesari.GetValue(i).ToString()) + " - ";
+                    }
+                    Results.Add(Row);
+                    Row = null;
+                }
+                CloseConnection();
+                return Results;
+            }
+            return Results;
         }
     }
 }
