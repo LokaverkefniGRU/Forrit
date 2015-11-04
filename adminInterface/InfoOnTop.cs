@@ -91,9 +91,9 @@ namespace adminInterface
                 MessageBox.Show(ex.ToString());
             }
         }
-        private void cbOnTop_CheckedChanged(object sender, EventArgs e)
+
+        private void cbOnTop_CheckStateChanged(object sender, EventArgs e)
         {
-            InfoOnTop infotop = new InfoOnTop();
             this.Close();
             Info info = new Info();
             info.Show();

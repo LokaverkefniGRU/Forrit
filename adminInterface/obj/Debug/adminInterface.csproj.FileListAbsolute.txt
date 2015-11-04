@@ -21,3 +21,15 @@ C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.Prope
 C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.csproj.GenerateResource.Cache
 C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.Info.resources
 C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.InfoOnTop.resources
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\bin\Debug\adminInterface.exe.config
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\obj\Debug\adminInterface.exe
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\obj\Debug\adminInterface.pdb
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\bin\Debug\adminInterface.exe
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\bin\Debug\adminInterface.pdb
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\obj\Debug\adminInterface.csprojResolveAssemblyReference.cache
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\obj\Debug\adminInterface.Form1.resources
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\obj\Debug\adminInterface.Info.resources
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\obj\Debug\adminInterface.InfoOnTop.resources
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\obj\Debug\adminInterface.Main.resources
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\obj\Debug\adminInterface.Properties.Resources.resources
+\\skra\nem-redirect$\0105982499\Documents\GitHub\Forrit\adminInterface\obj\Debug\adminInterface.csproj.GenerateResource.Cache

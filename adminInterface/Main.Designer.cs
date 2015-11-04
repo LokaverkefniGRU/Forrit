@@ -88,6 +88,9 @@
             this.tbKeycode = new System.Windows.Forms.TextBox();
             this.btGenerate = new System.Windows.Forms.Button();
             this.btInfo = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabPage9.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -133,10 +136,12 @@
             // 
             // tabPage9
             // 
+            this.tabPage9.Controls.Add(this.button1);
+            this.tabPage9.Controls.Add(this.richTextBox1);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(614, 255);
+            this.tabPage9.Size = new System.Drawing.Size(626, 277);
             this.tabPage9.TabIndex = 4;
             this.tabPage9.Text = "Post Control";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -157,7 +162,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(614, 255);
+            this.tabPage8.Size = new System.Drawing.Size(626, 277);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "Email";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -270,7 +275,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(614, 255);
+            this.tabPage6.Size = new System.Drawing.Size(626, 277);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "Report Control";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -371,7 +376,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(614, 255);
+            this.tabPage5.Size = new System.Drawing.Size(626, 277);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Delete";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -642,13 +647,31 @@
             this.btInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btInfo.BackgroundImage")));
             this.btInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btInfo.Image = ((System.Drawing.Image)(resources.GetObject("btInfo.Image")));
-            this.btInfo.Location = new System.Drawing.Point(584, 193);
+            this.btInfo.Location = new System.Drawing.Point(580, 193);
             this.btInfo.Name = "btInfo";
             this.btInfo.Size = new System.Drawing.Size(33, 31);
             this.btInfo.TabIndex = 22;
             this.btInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btInfo.UseVisualStyleBackColor = true;
             this.btInfo.Click += new System.EventHandler(this.btInfo_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox1.Location = new System.Drawing.Point(435, 0);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(191, 261);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(333, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 21);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Show All Posts";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -667,6 +690,7 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.tabPage9.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             this.tabPage6.ResumeLayout(false);
@@ -742,5 +766,7 @@
         private System.Windows.Forms.TextBox tbKeycode;
         private System.Windows.Forms.Button btGenerate;
         private System.Windows.Forms.Button btInfo;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

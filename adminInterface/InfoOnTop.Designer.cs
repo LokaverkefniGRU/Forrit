@@ -53,12 +53,15 @@
             // cbOnTop
             // 
             this.cbOnTop.AutoSize = true;
+            this.cbOnTop.Checked = true;
+            this.cbOnTop.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbOnTop.Location = new System.Drawing.Point(263, 241);
             this.cbOnTop.Name = "cbOnTop";
             this.cbOnTop.Size = new System.Drawing.Size(62, 17);
             this.cbOnTop.TabIndex = 18;
             this.cbOnTop.Text = "On Top";
             this.cbOnTop.UseVisualStyleBackColor = true;
+            this.cbOnTop.CheckStateChanged += new System.EventHandler(this.cbOnTop_CheckStateChanged);
             // 
             // lbOnline
             // 
@@ -157,7 +160,7 @@
             this.MinimizeBox = false;
             this.Name = "InfoOnTop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Info Panel";
+            this.Text = "Info Panel On Top";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.InfoOnTop_Load);
             this.ResumeLayout(false);

@@ -33,7 +33,7 @@ namespace adminInterface
             this.TopMost = cbOnTop.Checked;
 
             System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
-            timer1.Interval=200;//5 minutes
+            timer1.Interval=700;
             timer1.Tick += new System.EventHandler(timer1_Tick);
             timer1.Start();
 
@@ -101,7 +101,6 @@ namespace adminInterface
 
         private void cbOnTop_CheckedChanged(object sender, EventArgs e)
         {
-            Info info = new Info();
             this.Close();
             InfoOnTop infotop = new InfoOnTop();
             infotop.Show();
