@@ -88,6 +88,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabReport = new System.Windows.Forms.TabControl();
             this.btInfo = new System.Windows.Forms.Button();
+            this.tbPostDate = new System.Windows.Forms.TextBox();
+            this.tbPostID = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.tbPosterID = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.tabPost.SuspendLayout();
             this.tabEmail.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -134,7 +140,12 @@
             // 
             // tabPost
             // 
-            this.tabPost.Controls.Add(this.btShowAllPosts);
+            this.tabPost.Controls.Add(this.tbPosterID);
+            this.tabPost.Controls.Add(this.label25);
+            this.tabPost.Controls.Add(this.tbPostDate);
+            this.tabPost.Controls.Add(this.tbPostID);
+            this.tabPost.Controls.Add(this.label23);
+            this.tabPost.Controls.Add(this.label24);
             this.tabPost.Controls.Add(this.rtbPostBody);
             this.tabPost.Location = new System.Drawing.Point(4, 22);
             this.tabPost.Name = "tabPost";
@@ -146,7 +157,7 @@
             // 
             // btShowAllPosts
             // 
-            this.btShowAllPosts.Location = new System.Drawing.Point(333, 6);
+            this.btShowAllPosts.Location = new System.Drawing.Point(517, 166);
             this.btShowAllPosts.Name = "btShowAllPosts";
             this.btShowAllPosts.Size = new System.Drawing.Size(96, 21);
             this.btShowAllPosts.TabIndex = 16;
@@ -656,6 +667,54 @@
             this.btInfo.UseVisualStyleBackColor = true;
             this.btInfo.Click += new System.EventHandler(this.btInfo_Click);
             // 
+            // tbPostDate
+            // 
+            this.tbPostDate.Location = new System.Drawing.Point(247, 156);
+            this.tbPostDate.Name = "tbPostDate";
+            this.tbPostDate.Size = new System.Drawing.Size(151, 20);
+            this.tbPostDate.TabIndex = 19;
+            // 
+            // tbPostID
+            // 
+            this.tbPostID.Location = new System.Drawing.Point(247, 84);
+            this.tbPostID.Name = "tbPostID";
+            this.tbPostID.Size = new System.Drawing.Size(151, 20);
+            this.tbPostID.TabIndex = 17;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(211, 159);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(30, 13);
+            this.label23.TabIndex = 20;
+            this.label23.Text = "Date";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(199, 87);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(42, 13);
+            this.label24.TabIndex = 18;
+            this.label24.Text = "Post ID";
+            // 
+            // tbPosterID
+            // 
+            this.tbPosterID.Location = new System.Drawing.Point(247, 121);
+            this.tbPosterID.Name = "tbPosterID";
+            this.tbPosterID.Size = new System.Drawing.Size(151, 20);
+            this.tbPosterID.TabIndex = 25;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(190, 124);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(51, 13);
+            this.label25.TabIndex = 26;
+            this.label25.Text = "Poster ID";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -667,11 +726,13 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.tbSearchUpdate);
             this.Controls.Add(this.btShowAllUserUpdate);
+            this.Controls.Add(this.btShowAllPosts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.tabPost.ResumeLayout(false);
+            this.tabPost.PerformLayout();
             this.tabEmail.ResumeLayout(false);
             this.tabEmail.PerformLayout();
             this.tabPage6.ResumeLayout(false);
@@ -747,5 +808,11 @@
         private System.Windows.Forms.Button btInfo;
         private System.Windows.Forms.Button btShowAllPosts;
         private System.Windows.Forms.RichTextBox rtbPostBody;
+        private System.Windows.Forms.TextBox tbPostDate;
+        private System.Windows.Forms.TextBox tbPostID;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox tbPosterID;
+        private System.Windows.Forms.Label label25;
     }
 }

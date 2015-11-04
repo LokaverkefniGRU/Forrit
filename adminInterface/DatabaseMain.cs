@@ -96,14 +96,14 @@ namespace adminInterface
             string Row = null;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT id, username, fullname, email, confirmed, change_password, report_status FROM user WHERE id LIKE '%" + search + "%' OR username LIKE '%" + search + "%' OR fullname LIKE '%" + search + "%' OR email LIKE '%" + search + "%'";
+                fyrirspurn = "SELECT id, username, fullname, email, confirmed, change_password, report_status FROM user WHERE id LIKE '%" + search + "%' OR username LIKE '%" + search + "%' OR confirmed LIKE '%" + search + "%' OR fullname LIKE '%" + search + "%' OR email LIKE '%" + search + "%'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
                 {
                     for (int i = 0; i < sqllesari.FieldCount; i++)
                     {
-                        Row += (sqllesari.GetValue(i).ToString()) + ":";
+                        Row += (sqllesari.GetValue(i).ToString()) + "-";
                     }
                     Results.Add(Row);
                     Row = null;

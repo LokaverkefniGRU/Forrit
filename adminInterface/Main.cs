@@ -18,6 +18,7 @@ namespace adminInterface
     {
         DatabaseMain database = new DatabaseMain();
         Class cs = new Class();
+        int tabpost = 0;
         public Main()
         {
             InitializeComponent();
@@ -29,6 +30,8 @@ namespace adminInterface
             {
                 MessageBox.Show(ex.ToString());
             }
+            btShowAllPosts.Visible = false;
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,12 +50,17 @@ namespace adminInterface
                     tbIDUserUpdate.Text = nafnid[0];
                     tbIDUserDelete.Text = nafnid[0];
                     tbEmailID.Text = nafnid[0];
+                    tbPostID.Text = nafnid[0];
                     tbUsernameUserUpdate.Text = nafnid[1];
                     tbUsernameUserDelete.Text = nafnid[1];
+                    tbPosterID.Text = nafnid[1];
                     tbFullnameUserUpdate.Text = nafnid[2];
                     tbFullnameUserDelete.Text = nafnid[2];
                     tbEmailName.Text = nafnid[2];
+                    rtbPostBody.Text = nafnid[2];
                     tbEmailUserUpdate.Text = nafnid[3];
+                    tbPostDate.Text = nafnid[3];
+
                     tbEmailUserDelete.Text = nafnid[3];
                     tbEmailReceiver.Text = nafnid[3];
                     if (nafnid[4] == 0.ToString())
@@ -64,7 +72,7 @@ namespace adminInterface
                         nafnid[4] = "Yes";
                     }
                     tbConfirmedUserUpdate.Text = nafnid[4];
-                    if (tabPost.SelectedTab == false)
+                    if (tabpost == 0)
                     {
                         if (nafnid[5] == 0.ToString())
                         {
@@ -386,7 +394,17 @@ namespace adminInterface
 
         private void tabReport_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (tabReport.SelectedTab == tabReport.TabPages["tabPost"])
+            {
+                tabpost = 1;
+                btShowAllUserUpdate.Visible = false;
+                btShowAllPosts.Visible = true;
+            }
+            else
+            {
+                btShowAllUserUpdate.Visible = true;
+                btShowAllPosts.Visible = false;
+            }
         }
     }
 }
