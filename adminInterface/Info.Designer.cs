@@ -36,6 +36,7 @@
             this.tbINFOConfirmed = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbOnline = new System.Windows.Forms.Label();
+            this.cbOnTop = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // tbINFOBanned
@@ -98,7 +99,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 47);
+            this.label4.Location = new System.Drawing.Point(34, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 6;
@@ -108,11 +109,22 @@
             // 
             this.lbOnline.AutoSize = true;
             this.lbOnline.ForeColor = System.Drawing.Color.Lime;
-            this.lbOnline.Location = new System.Drawing.Point(78, 48);
+            this.lbOnline.Location = new System.Drawing.Point(71, 35);
             this.lbOnline.Name = "lbOnline";
             this.lbOnline.Size = new System.Drawing.Size(13, 13);
             this.lbOnline.TabIndex = 7;
             this.lbOnline.Text = "0";
+            // 
+            // cbOnTop
+            // 
+            this.cbOnTop.AutoSize = true;
+            this.cbOnTop.Location = new System.Drawing.Point(12, 73);
+            this.cbOnTop.Name = "cbOnTop";
+            this.cbOnTop.Size = new System.Drawing.Size(62, 17);
+            this.cbOnTop.TabIndex = 8;
+            this.cbOnTop.Text = "On Top";
+            this.cbOnTop.UseVisualStyleBackColor = true;
+            this.cbOnTop.CheckedChanged += new System.EventHandler(this.cbOnTop_CheckedChanged);
             // 
             // Info
             // 
@@ -120,6 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(337, 104);
+            this.Controls.Add(this.cbOnTop);
             this.Controls.Add(this.lbOnline);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -134,7 +147,6 @@
             this.Name = "Info";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Info Panel";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Info_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -151,5 +163,6 @@
         private System.Windows.Forms.TextBox tbINFOConfirmed;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbOnline;
+        private System.Windows.Forms.CheckBox cbOnTop;
     }
 }

@@ -20,3 +20,4 @@ C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.Main.
 C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.Properties.Resources.resources
 C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.csproj.GenerateResource.Cache
 C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.Info.resources
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.InfoOnTop.resources
