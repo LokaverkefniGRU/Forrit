@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace adminInterface
 {
     public partial class Info : Form
@@ -29,6 +30,11 @@ namespace adminInterface
 
         private void Info_Load(object sender, EventArgs e)
         {
+            System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
+            timer1.Interval=200;//5 minutes
+            timer1.Tick += new System.EventHandler(timer1_Tick);
+            timer1.Start();
+
             List<int> Registered = database.UserCount();
             tbINFORegistered.Text = Registered.Count().ToString();
 
@@ -39,6 +45,24 @@ namespace adminInterface
             tbINFOConfirmed.Text = Confirmed.Count().ToString();
         }
 
+        
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //do whatever you want 
+            RefreshMyForm();
+        }
+
+        private void RefreshMyForm()
+        {
+            List<int> Registered = database.UserCount();
+            tbINFORegistered.Text = Registered.Count().ToString();
+
+            List<int> Online = database.UserOnline();
+            lbOnline.Text = Online.Count().ToString();
+
+            List<int> Confirmed = database.UserConfirmed();
+            tbINFOConfirmed.Text = Confirmed.Count().ToString();
+        }
     }
 }
