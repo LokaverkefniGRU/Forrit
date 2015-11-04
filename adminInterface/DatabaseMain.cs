@@ -216,6 +216,29 @@ namespace adminInterface
             return Results;
             
         }
+        public List<string> IpAdresses()
+        {
+            List<string> Results = new List<string>();
+            string Row = null;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT ip FROM user WHERE online='1'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    for (int i = 0; i < sqllesari.FieldCount; i++)
+                    {
+                        Row += (sqllesari.GetValue(i).ToString()) + "";
+                    }
+                    Results.Add(Row);
+                    Row = null;
+                }
+                CloseConnection();
+                return Results;
+            }
+            return Results;
 
+        }
     }
 }

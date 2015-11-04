@@ -45,6 +45,22 @@ namespace adminInterface
 
             List<int> Confirmed = database.UserConfirmed();
             tbINFOConfirmed.Text = Confirmed.Count().ToString();
+
+            listBox1.Items.Clear();
+            List<string> linur = new List<string>();
+            try
+            {
+                linur = database.IpAdresses();
+
+                foreach (string lin in linur)
+                {
+                    listBox1.Items.Add(lin);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         
@@ -65,6 +81,22 @@ namespace adminInterface
 
             List<int> Confirmed = database.UserConfirmed();
             tbINFOConfirmed.Text = Confirmed.Count().ToString();
+
+            listBox1.Items.Clear();
+            List<string> linur = new List<string>();
+            try
+            {
+                linur = database.IpAdresses();
+
+                foreach (string lin in linur)
+                {
+                    listBox1.Items.Add(lin);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void cbOnTop_CheckedChanged(object sender, EventArgs e)

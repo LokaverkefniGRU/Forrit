@@ -115,9 +115,9 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(8, 0);
+            this.listBox1.Location = new System.Drawing.Point(2, 0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(614, 160);
+            this.listBox1.Size = new System.Drawing.Size(622, 160);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -471,7 +471,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(614, 255);
+            this.tabPage4.Size = new System.Drawing.Size(626, 277);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Update";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -614,10 +614,10 @@
             this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Controls.Add(this.tabPage9);
-            this.tabControl2.Location = new System.Drawing.Point(2, 215);
+            this.tabControl2.Location = new System.Drawing.Point(0, 215);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(622, 281);
+            this.tabControl2.Size = new System.Drawing.Size(634, 303);
             this.tabControl2.TabIndex = 0;
             // 
             // tbKeycode
@@ -663,6 +663,7 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.tbSearchUpdate);
             this.Controls.Add(this.btShowAllUserUpdate);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
