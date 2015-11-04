@@ -360,9 +360,10 @@ namespace adminInterface
             tbKeycode.Text = gen.ToString();
         }
 
-
-
-
-
+        private void btInfo_Click(object sender, EventArgs e)
+        {
+            Info info = new Info();
+            info.Show();
+        }
     }
 }

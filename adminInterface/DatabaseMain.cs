@@ -129,7 +129,53 @@ namespace adminInterface
             int Row = 0;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT COUNT(id) FROM user";
+                fyrirspurn = "SELECT id FROM user";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    for (int i = 0; i < sqllesari.FieldCount; i++)
+                    {
+                        Row = Row + Convert.ToInt32(sqllesari.GetValue(i));
+                    }
+                    Results.Add(Row);
+                    Row = 0;
+                }
+                CloseConnection();
+                return Results;
+            }
+            return Results;
+        }
+        public List<int> UserOnline()
+        {
+            List<int> Results = new List<int>();
+            int Row = 0;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT id FROM user WHERE online='1'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    for (int i = 0; i < sqllesari.FieldCount; i++)
+                    {
+                        Row = Row + Convert.ToInt32(sqllesari.GetValue(i));
+                    }
+                    Results.Add(Row);
+                    Row = 0;
+                }
+                CloseConnection();
+                return Results;
+            }
+            return Results;
+        }
+        public List<int> UserConfirmed()
+        {
+            List<int> Results = new List<int>();
+            int Row = 0;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT id FROM user WHERE confirmed='1'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
@@ -170,5 +216,6 @@ namespace adminInterface
             return Results;
             
         }
+
     }
 }

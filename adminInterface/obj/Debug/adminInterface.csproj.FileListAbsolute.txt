@@ -9,3 +9,14 @@
 \\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\obj\Debug\adminInterface.exe
 \\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\obj\Debug\adminInterface.pdb
 \\skra\nem-redirect$\0105982499\Documents\Visual Studio 2013\Projects\adminInterface\adminInterface\obj\Debug\adminInterface.Main.resources
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\bin\Debug\adminInterface.exe.config
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.exe
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.pdb
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\bin\Debug\adminInterface.exe
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\bin\Debug\adminInterface.pdb
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.csprojResolveAssemblyReference.cache
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.Form1.resources
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.Main.resources
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.Properties.Resources.resources
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.csproj.GenerateResource.Cache
+C:\Users\klassy\Desktop\Git\Forrit\adminInterface\obj\Debug\adminInterface.Info.resources
