@@ -252,7 +252,7 @@ namespace adminInterface
                 {
                     for (int i = 0; i < sqllesari.FieldCount; i++)
                     {
-                        Row += (sqllesari.GetValue(i).ToString()) + " - ";
+                        Row += (sqllesari.GetValue(i).ToString()) + "-";
                     }
                     Results.Add(Row);
                     Row = null;

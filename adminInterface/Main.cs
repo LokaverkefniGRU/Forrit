@@ -34,49 +34,54 @@ namespace adminInterface
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            if (listBox1.SelectedIndex != -1)
-            {
-                string nafn = null;
-                string[] nafnid = null;
-                nafn = listBox1.SelectedItem.ToString();
 
-                char split = '-';
+                if (listBox1.SelectedIndex != -1)
+                {
+                    string nafn = null;
+                    string[] nafnid = null;
+                    nafn = listBox1.SelectedItem.ToString();
 
-                nafnid = nafn.Split(split);
-                tbIDUserUpdate.Text = nafnid[0];
-                tbIDUserDelete.Text = nafnid[0];
-                tbEmailID.Text = nafnid[0];
-                tbUsernameUserUpdate.Text = nafnid[1];
-                tbUsernameUserDelete.Text = nafnid[1];
-                tbFullnameUserUpdate.Text = nafnid[2];
-                tbFullnameUserDelete.Text = nafnid[2];
-                tbEmailName.Text = nafnid[2];
-                tbEmailUserUpdate.Text = nafnid[3];
-                tbEmailUserDelete.Text = nafnid[3];
-                tbEmailReceiver.Text = nafnid[3];
-                if (nafnid[4] == 0.ToString())
-                {
-                    nafnid[4] = "No";
-                }
-                else if (nafnid[4] == 1.ToString())
-                {
-                    nafnid[4] = "Yes";
-                }
-                tbConfirmedUserUpdate.Text = nafnid[4];
-                if (nafnid[5] == 0.ToString())
-                {
-                    nafnid[5] = "No";
-                }
-                else if (nafnid[5] == 1.ToString())
-                {
-                    nafnid[5] = "Yes";
-                }
-                tbChngPwUserUpdate.Text = nafnid[5];
-                if (nafnid[6] == 0.ToString())
-                {
-                    nafnid[6] = "No";
-                }
-                tbRPSUserUpdate.Text = nafnid[6];
+                    char split = '-';
+
+                    nafnid = nafn.Split(split);
+                    tbIDUserUpdate.Text = nafnid[0];
+                    tbIDUserDelete.Text = nafnid[0];
+                    tbEmailID.Text = nafnid[0];
+                    tbUsernameUserUpdate.Text = nafnid[1];
+                    tbUsernameUserDelete.Text = nafnid[1];
+                    tbFullnameUserUpdate.Text = nafnid[2];
+                    tbFullnameUserDelete.Text = nafnid[2];
+                    tbEmailName.Text = nafnid[2];
+                    tbEmailUserUpdate.Text = nafnid[3];
+                    tbEmailUserDelete.Text = nafnid[3];
+                    tbEmailReceiver.Text = nafnid[3];
+                    if (nafnid[4] == 0.ToString())
+                    {
+                        nafnid[4] = "No";
+                    }
+                    else if (nafnid[4] == 1.ToString())
+                    {
+                        nafnid[4] = "Yes";
+                    }
+                    tbConfirmedUserUpdate.Text = nafnid[4];
+                    if (tabPost.SelectedTab == false)
+                    {
+                        if (nafnid[5] == 0.ToString())
+                        {
+                            nafnid[5] = "No";
+                        }
+                        else if (nafnid[5] == 1.ToString())
+                        {
+                            nafnid[5] = "Yes";
+                        }
+                        tbChngPwUserUpdate.Text = nafnid[5];
+                        if (nafnid[6] == 0.ToString())
+                        {
+                            nafnid[6] = "No";
+                        }
+                        tbRPSUserUpdate.Text = nafnid[6];
+                    }
+                
             }
         }
 
@@ -377,6 +382,11 @@ namespace adminInterface
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void tabReport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -34,6 +34,8 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btShowAllUserUpdate = new System.Windows.Forms.Button();
             this.tabPost = new System.Windows.Forms.TabPage();
+            this.btShowAllPosts = new System.Windows.Forms.Button();
+            this.rtbPostBody = new System.Windows.Forms.RichTextBox();
             this.tabEmail = new System.Windows.Forms.TabPage();
             this.tbEmailSubject = new System.Windows.Forms.TextBox();
             this.rtbEmailBody = new System.Windows.Forms.RichTextBox();
@@ -86,8 +88,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabReport = new System.Windows.Forms.TabControl();
             this.btInfo = new System.Windows.Forms.Button();
-            this.rtbPostBody = new System.Windows.Forms.RichTextBox();
-            this.btShowAllPosts = new System.Windows.Forms.Button();
             this.tabPost.SuspendLayout();
             this.tabEmail.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -143,6 +143,25 @@
             this.tabPost.TabIndex = 4;
             this.tabPost.Text = "Post Control";
             this.tabPost.UseVisualStyleBackColor = true;
+            // 
+            // btShowAllPosts
+            // 
+            this.btShowAllPosts.Location = new System.Drawing.Point(333, 6);
+            this.btShowAllPosts.Name = "btShowAllPosts";
+            this.btShowAllPosts.Size = new System.Drawing.Size(96, 21);
+            this.btShowAllPosts.TabIndex = 16;
+            this.btShowAllPosts.Text = "Show All Posts";
+            this.btShowAllPosts.UseVisualStyleBackColor = true;
+            this.btShowAllPosts.Click += new System.EventHandler(this.btShowAllPosts_Click);
+            // 
+            // rtbPostBody
+            // 
+            this.rtbPostBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtbPostBody.Location = new System.Drawing.Point(435, 0);
+            this.rtbPostBody.Name = "rtbPostBody";
+            this.rtbPostBody.Size = new System.Drawing.Size(191, 261);
+            this.rtbPostBody.TabIndex = 0;
+            this.rtbPostBody.Text = "";
             // 
             // tabEmail
             // 
@@ -622,6 +641,7 @@
             this.tabReport.SelectedIndex = 0;
             this.tabReport.Size = new System.Drawing.Size(634, 303);
             this.tabReport.TabIndex = 0;
+            this.tabReport.SelectedIndexChanged += new System.EventHandler(this.tabReport_SelectedIndexChanged);
             // 
             // btInfo
             // 
@@ -635,25 +655,6 @@
             this.btInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btInfo.UseVisualStyleBackColor = true;
             this.btInfo.Click += new System.EventHandler(this.btInfo_Click);
-            // 
-            // rtbPostBody
-            // 
-            this.rtbPostBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtbPostBody.Location = new System.Drawing.Point(435, 0);
-            this.rtbPostBody.Name = "rtbPostBody";
-            this.rtbPostBody.Size = new System.Drawing.Size(191, 261);
-            this.rtbPostBody.TabIndex = 0;
-            this.rtbPostBody.Text = "";
-            // 
-            // btShowAllPosts
-            // 
-            this.btShowAllPosts.Location = new System.Drawing.Point(333, 6);
-            this.btShowAllPosts.Name = "btShowAllPosts";
-            this.btShowAllPosts.Size = new System.Drawing.Size(96, 21);
-            this.btShowAllPosts.TabIndex = 16;
-            this.btShowAllPosts.Text = "Show All Posts";
-            this.btShowAllPosts.UseVisualStyleBackColor = true;
-            this.btShowAllPosts.Click += new System.EventHandler(this.btShowAllPosts_Click);
             // 
             // Main
             // 
