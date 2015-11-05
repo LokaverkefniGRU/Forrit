@@ -34,8 +34,14 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btShowAllUserUpdate = new System.Windows.Forms.Button();
             this.tabPost = new System.Windows.Forms.TabPage();
-            this.btShowAllPosts = new System.Windows.Forms.Button();
+            this.tbPosterID = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.tbPostDate = new System.Windows.Forms.TextBox();
+            this.tbPostID = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.rtbPostBody = new System.Windows.Forms.RichTextBox();
+            this.btShowAllPosts = new System.Windows.Forms.Button();
             this.tabEmail = new System.Windows.Forms.TabPage();
             this.tbEmailSubject = new System.Windows.Forms.TextBox();
             this.rtbEmailBody = new System.Windows.Forms.RichTextBox();
@@ -88,12 +94,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabReport = new System.Windows.Forms.TabControl();
             this.btInfo = new System.Windows.Forms.Button();
-            this.tbPostDate = new System.Windows.Forms.TextBox();
-            this.tbPostID = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.tbPosterID = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
+            this.btChangePassword = new System.Windows.Forms.Button();
             this.tabPost.SuspendLayout();
             this.tabEmail.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -155,15 +156,53 @@
             this.tabPost.Text = "Post Control";
             this.tabPost.UseVisualStyleBackColor = true;
             // 
-            // btShowAllPosts
+            // tbPosterID
             // 
-            this.btShowAllPosts.Location = new System.Drawing.Point(517, 166);
-            this.btShowAllPosts.Name = "btShowAllPosts";
-            this.btShowAllPosts.Size = new System.Drawing.Size(96, 21);
-            this.btShowAllPosts.TabIndex = 16;
-            this.btShowAllPosts.Text = "Show All Posts";
-            this.btShowAllPosts.UseVisualStyleBackColor = true;
-            this.btShowAllPosts.Click += new System.EventHandler(this.btShowAllPosts_Click);
+            this.tbPosterID.Location = new System.Drawing.Point(247, 121);
+            this.tbPosterID.Name = "tbPosterID";
+            this.tbPosterID.Size = new System.Drawing.Size(151, 20);
+            this.tbPosterID.TabIndex = 25;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(190, 124);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(51, 13);
+            this.label25.TabIndex = 26;
+            this.label25.Text = "Poster ID";
+            // 
+            // tbPostDate
+            // 
+            this.tbPostDate.Location = new System.Drawing.Point(247, 156);
+            this.tbPostDate.Name = "tbPostDate";
+            this.tbPostDate.Size = new System.Drawing.Size(151, 20);
+            this.tbPostDate.TabIndex = 19;
+            // 
+            // tbPostID
+            // 
+            this.tbPostID.Location = new System.Drawing.Point(247, 84);
+            this.tbPostID.Name = "tbPostID";
+            this.tbPostID.Size = new System.Drawing.Size(151, 20);
+            this.tbPostID.TabIndex = 17;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(211, 159);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(30, 13);
+            this.label23.TabIndex = 20;
+            this.label23.Text = "Date";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(199, 87);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(42, 13);
+            this.label24.TabIndex = 18;
+            this.label24.Text = "Post ID";
             // 
             // rtbPostBody
             // 
@@ -173,6 +212,16 @@
             this.rtbPostBody.Size = new System.Drawing.Size(191, 261);
             this.rtbPostBody.TabIndex = 0;
             this.rtbPostBody.Text = "";
+            // 
+            // btShowAllPosts
+            // 
+            this.btShowAllPosts.Location = new System.Drawing.Point(517, 166);
+            this.btShowAllPosts.Name = "btShowAllPosts";
+            this.btShowAllPosts.Size = new System.Drawing.Size(96, 21);
+            this.btShowAllPosts.TabIndex = 16;
+            this.btShowAllPosts.Text = "Show All Posts";
+            this.btShowAllPosts.UseVisualStyleBackColor = true;
+            this.btShowAllPosts.Click += new System.EventHandler(this.btShowAllPosts_Click);
             // 
             // tabEmail
             // 
@@ -485,6 +534,7 @@
             // 
             // tabUpdate
             // 
+            this.tabUpdate.Controls.Add(this.btChangePassword);
             this.tabUpdate.Controls.Add(this.label20);
             this.tabUpdate.Controls.Add(this.btUpdate);
             this.tabUpdate.Controls.Add(this.label7);
@@ -667,53 +717,15 @@
             this.btInfo.UseVisualStyleBackColor = true;
             this.btInfo.Click += new System.EventHandler(this.btInfo_Click);
             // 
-            // tbPostDate
+            // btChangePassword
             // 
-            this.tbPostDate.Location = new System.Drawing.Point(247, 156);
-            this.tbPostDate.Name = "tbPostDate";
-            this.tbPostDate.Size = new System.Drawing.Size(151, 20);
-            this.tbPostDate.TabIndex = 19;
-            // 
-            // tbPostID
-            // 
-            this.tbPostID.Location = new System.Drawing.Point(247, 84);
-            this.tbPostID.Name = "tbPostID";
-            this.tbPostID.Size = new System.Drawing.Size(151, 20);
-            this.tbPostID.TabIndex = 17;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(211, 159);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(30, 13);
-            this.label23.TabIndex = 20;
-            this.label23.Text = "Date";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(199, 87);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(42, 13);
-            this.label24.TabIndex = 18;
-            this.label24.Text = "Post ID";
-            // 
-            // tbPosterID
-            // 
-            this.tbPosterID.Location = new System.Drawing.Point(247, 121);
-            this.tbPosterID.Name = "tbPosterID";
-            this.tbPosterID.Size = new System.Drawing.Size(151, 20);
-            this.tbPosterID.TabIndex = 25;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(190, 124);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(51, 13);
-            this.label25.TabIndex = 26;
-            this.label25.Text = "Poster ID";
+            this.btChangePassword.Location = new System.Drawing.Point(502, 227);
+            this.btChangePassword.Name = "btChangePassword";
+            this.btChangePassword.Size = new System.Drawing.Size(107, 21);
+            this.btChangePassword.TabIndex = 19;
+            this.btChangePassword.Text = "Change password";
+            this.btChangePassword.UseVisualStyleBackColor = true;
+            this.btChangePassword.Click += new System.EventHandler(this.btChangePassword_Click);
             // 
             // Main
             // 
@@ -814,5 +826,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox tbPosterID;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button btChangePassword;
     }
 }

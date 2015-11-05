@@ -262,5 +262,15 @@ namespace adminInterface
             }
             return Results;
         }
+        public void ChangePassword()
+        {
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "UPDATE user SET change_password='1'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
     }
 }

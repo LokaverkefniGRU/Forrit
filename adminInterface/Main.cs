@@ -406,5 +406,14 @@ namespace adminInterface
                 btShowAllPosts.Visible = false;
             }
         }
+
+        private void btChangePassword_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to change password to everyone?", "Admin Interface", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                database.ChangePassword();
+            }
+        }
     }
 }
