@@ -251,13 +251,13 @@ namespace adminInterface
                         //Authentication.
                         //This is where the valid email account comes into play. You must have a valid email account(with password) to give our program a place to send the mail from.
 
-                        NetworkCredential cred = new NetworkCredential("lokaverkefni.cf@gmail.com", "EddiOgAron");
+                        NetworkCredential cred = new NetworkCredential("lokaverkefni.com@gmail.com", "EddiOgAron");
 
                         //To send an email we must first create a new mailMessage(an email) to send.
                         MailMessage Msg = new MailMessage();
 
                         // Sender e-mail address.
-                        Msg.From = new MailAddress("lokaverkefni.cf@gmail.com");//Nothing But Above Credentials or your credentials (*******@gmail.com)
+                        Msg.From = new MailAddress("Lokaverkefni.com");//Nothing But Above Credentials or your credentials (*******@gmail.com)
 
                         // Recipient e-mail address.
                         Msg.To.Add(receiver[emm]);
@@ -310,13 +310,13 @@ namespace adminInterface
                     //Authentication.
                     //This is where the valid email account comes into play. You must have a valid email account(with password) to give our program a place to send the mail from.
 
-                    NetworkCredential cred = new NetworkCredential("lokaverkefni.cf@gmail.com", "EddiOgAron");
+                    NetworkCredential cred = new NetworkCredential("lokaverkefni.com@gmail.com", "EddiOgAron");
 
                     //To send an email we must first create a new mailMessage(an email) to send.
                     MailMessage Msg = new MailMessage();
 
                     // Sender e-mail address.
-                    Msg.From = new MailAddress("lokaverkefni.cf@gmail.com");//Nothing But Above Credentials or your credentials (*******@gmail.com)
+                    Msg.From = new MailAddress("lokaverkefni.com@gmail.com");//Nothing But Above Credentials or your credentials (*******@gmail.com)
 
                     // Recipient e-mail address.
                     Msg.To.Add(tbEmailReceiver.Text);
@@ -413,6 +413,74 @@ namespace adminInterface
             if (dialogResult == DialogResult.Yes)
             {
                 database.ChangePassword();
+            }
+        }
+
+        private void btDeletePost_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            string postid = tbPostID.Text;
+            string userid = tbPosterID.Text;
+
+            try
+            {
+                database.DeletePost(postid);
+                try
+                {
+
+                    //Sending the email.
+                    //Now we must create a new Smtp client to send our email.
+
+                    SmtpClient client = new SmtpClient("smtp.gmail.com", 587);   //smtp.gmail.com // For Gmail
+                    //smtp.live.com // Windows live / Hotmail
+                    //smtp.mail.yahoo.com // Yahoo
+                    //smtp.aim.com // AIM
+                    //my.inbox.com // Inbox
+
+
+                    //Authentication.
+                    //This is where the valid email account comes into play. You must have a valid email account(with password) to give our program a place to send the mail from.
+
+                    NetworkCredential cred = new NetworkCredential("lokaverkefni.com@gmail.com", "EddiOgAron");
+
+                    //To send an email we must first create a new mailMessage(an email) to send.
+                    MailMessage Msg = new MailMessage();
+
+                    // Sender e-mail address.
+                    Msg.From = new MailAddress("lokaverkefni.com@gmail.com");//Nothing But Above Credentials or your credentials (*******@gmail.com)
+
+                    // Recipient e-mail address.
+                    Msg.To.Add(database.EmailOfPoster(userid));
+
+                    // Assign the subject of our message.
+                    Msg.Subject = "A post that you created has been deleted\r";
+
+                    // Create the content(body) of our message.
+                    Msg.Body = "A post that you posted has been deleted. If you encounter this as a mistake, please contact support. \br " + database.PostContent(postid);
+
+                    // Send our account login details to the client.
+                    client.Credentials = cred;
+
+                    //Enabling SSL(Secure Sockets Layer, encyription) is reqiured by most email providers to send mail
+                    client.EnableSsl = true;
+
+                    //Confirmation After Click the Button
+
+                    // Send our email.
+                    client.Send(Msg);
+
+
+                    MessageBox.Show("Email Sent to: " + tbEmailReceiver.Text + "\rBody:\r" + rtbPostBody.Text);
+                }
+                catch (Exception ex)
+                {
+                    // If Mail Doesnt Send Error Mesage Will Be Displayed
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }

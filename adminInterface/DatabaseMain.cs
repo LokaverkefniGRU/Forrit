@@ -24,9 +24,9 @@ namespace adminInterface
         public void TengingVidGagnagrunn()
         {
             server = "tsuts.tskoli.is";
-            database = "2410982069_gru";
-            uid = "2410982069";
-            password = "svolu2";
+            database = "GRU_H14_gru";
+            uid = "GRU_H14";
+            password = "bananabomba98";
 
             tengistrengur = "server=" + server + ";userid=" + uid + ";password=" + password + ";database=" + database;
             sqltenging = new MySqlConnection(tengistrengur);
@@ -117,6 +117,14 @@ namespace adminInterface
         {
             if (OpenConnection() == true)
             {
+                fyrirspurn = "DELETE FROM friend_request WHERE receiver_ID='" + id + "' OR sender_ID='" + id + "'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+
+                fyrirspurn = "DELETE FROM post WHERE user_ID='" + id + "'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+
                 fyrirspurn = "DELETE FROM user WHERE id='" + id + "' AND username='" + username + "' AND fullname='" + fullname + "' AND email='" + email + "'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
@@ -245,7 +253,7 @@ namespace adminInterface
             string Row = null;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT id, user_id, content, date FROM post";
+                fyrirspurn = "SELECT id, user_id, content, date_time FROM post ORDER BY date_time DESC";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
@@ -271,6 +279,61 @@ namespace adminInterface
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
             }
+        }
+        public void DeletePost(string postid)
+        {
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "DELETE FROM post_like WHERE post_ID='" + postid + "'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+
+                fyrirspurn = "DELETE FROM comment WHERE post_id='" + postid + "'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+
+                fyrirspurn = "DELETE FROM post WHERE post='" + postid + "'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
+        public string EmailOfPoster(string userid)
+        {
+            string Results = null;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT email FROM user WHERE id='" + userid + "'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    for (int i = 0; i < sqllesari.FieldCount; i++)
+                    {
+                        Results += (sqllesari.GetValue(i).ToString());
+                    }
+                }
+                CloseConnection();
+                return Results;
+            }
+            return Results;
+        }
+        public string PostContent(string postid)
+        {
+            string Results = null;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT content FROM post WHERE id='" + postid + "'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    Results = (sqllesari.ToString());
+                }
+                CloseConnection();
+                return Results;
+            }
+            return Results;
         }
     }
 }

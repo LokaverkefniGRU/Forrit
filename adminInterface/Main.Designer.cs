@@ -76,6 +76,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tabUpdate = new System.Windows.Forms.TabPage();
+            this.btChangePassword = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.btUpdate = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -94,7 +95,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabReport = new System.Windows.Forms.TabControl();
             this.btInfo = new System.Windows.Forms.Button();
-            this.btChangePassword = new System.Windows.Forms.Button();
+            this.btDeletePost = new System.Windows.Forms.Button();
             this.tabPost.SuspendLayout();
             this.tabEmail.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -141,6 +142,7 @@
             // 
             // tabPost
             // 
+            this.tabPost.Controls.Add(this.btDeletePost);
             this.tabPost.Controls.Add(this.tbPosterID);
             this.tabPost.Controls.Add(this.label25);
             this.tabPost.Controls.Add(this.tbPostDate);
@@ -559,6 +561,16 @@
             this.tabUpdate.Text = "Update";
             this.tabUpdate.UseVisualStyleBackColor = true;
             // 
+            // btChangePassword
+            // 
+            this.btChangePassword.Location = new System.Drawing.Point(502, 227);
+            this.btChangePassword.Name = "btChangePassword";
+            this.btChangePassword.Size = new System.Drawing.Size(107, 21);
+            this.btChangePassword.TabIndex = 19;
+            this.btChangePassword.Text = "Change password";
+            this.btChangePassword.UseVisualStyleBackColor = true;
+            this.btChangePassword.Click += new System.EventHandler(this.btChangePassword_Click);
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -717,15 +729,15 @@
             this.btInfo.UseVisualStyleBackColor = true;
             this.btInfo.Click += new System.EventHandler(this.btInfo_Click);
             // 
-            // btChangePassword
+            // btDeletePost
             // 
-            this.btChangePassword.Location = new System.Drawing.Point(502, 227);
-            this.btChangePassword.Name = "btChangePassword";
-            this.btChangePassword.Size = new System.Drawing.Size(107, 21);
-            this.btChangePassword.TabIndex = 19;
-            this.btChangePassword.Text = "Change password";
-            this.btChangePassword.UseVisualStyleBackColor = true;
-            this.btChangePassword.Click += new System.EventHandler(this.btChangePassword_Click);
+            this.btDeletePost.Location = new System.Drawing.Point(75, 209);
+            this.btDeletePost.Name = "btDeletePost";
+            this.btDeletePost.Size = new System.Drawing.Size(75, 23);
+            this.btDeletePost.TabIndex = 27;
+            this.btDeletePost.Text = "Delete Post";
+            this.btDeletePost.UseVisualStyleBackColor = true;
+            this.btDeletePost.Click += new System.EventHandler(this.btDeletePost_Click);
             // 
             // Main
             // 
@@ -827,5 +839,6 @@
         private System.Windows.Forms.TextBox tbPosterID;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btChangePassword;
+        private System.Windows.Forms.Button btDeletePost;
     }
 }
